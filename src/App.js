@@ -1,18 +1,23 @@
 import Painting from "./components/Painting"
+// import PaintingList from "./components/PaintingList"
+import Section from "./components/Section"
 import paintings from './paintings.json' 
 
 export default function App() {
 const isOnline = true
 
     return (<div> 
-        {paintings.map(painting => <Painting
+        <Section title = "Top of the week"/>
+        <Section/>
+
+        {/* {paintings.map(painting => <Painting
         key = {painting.id}
         url = {painting.url}
         title = {painting.title}  
         authorName = {painting.author.tag}
         profileUrl = {painting.author.url}
         price = {painting.price}
-        quantity= {painting.quantity}   /> )}
+        quantity= {painting.quantity}   /> )} */}
 
          {/* <Painting
 url = {paintings[0].url}
