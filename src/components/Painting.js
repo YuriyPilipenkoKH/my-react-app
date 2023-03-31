@@ -22,4 +22,5 @@ const Painting = ({id,url,title,authorName='unknown',price,profileUrl,quantity})
         price: PropTypes.number.isRequired,
         quantity: PropTypes.number.isRequired,
     }
+
     export default Painting 
