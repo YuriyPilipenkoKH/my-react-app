@@ -1,4 +1,4 @@
-import Painting from "./components/Painting"
+import Painting from "./Painting"
 import PropTypes from "prop-types";
 
 function PaintingList ({items}) {

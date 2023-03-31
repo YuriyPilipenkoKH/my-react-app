@@ -1,14 +1,17 @@
-import Painting from "./components/Painting"
-// import PaintingList from "./components/PaintingList"
+// import Painting from "./components/Painting"
+import PaintingList from "./components/PaintingList"
 import Section from "./components/Section"
 import paintings from './paintings.json' 
 
 export default function App() {
-const isOnline = true
+// const isOnline = true
 
     return (<div> 
         <Section title = "Top of the week"/>
+        <PaintingList items={paintings} />
         <Section/>
+
+        <Section title="Best"></Section>
 
         {/* {paintings.map(painting => <Painting
         key = {painting.id}
