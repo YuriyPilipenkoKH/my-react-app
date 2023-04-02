@@ -9,4 +9,4 @@ export const App = () => {
       <EventBoard events={upcomingEvents} />
     </>
   );
-};
+}; 
