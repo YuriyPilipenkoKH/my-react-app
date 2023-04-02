@@ -7,6 +7,7 @@ import { FcCalendar, FcClock } from 'react-icons/fc';
 
 import {formatEventStart, formatEventDuration} from 'utils'
 import { iconSize } from "constants";
+import { Card, EventName } from './Event.styled';
 
 
 export const Event = ({name,location,speaker,type,start,end}) => {
@@ -18,8 +19,8 @@ export const Event = ({name,location,speaker,type,start,end}) => {
     // console.log(css[type]);
 
     return (
-    <div className={css.event}>
-        <h2 className={css.title}>{name}</h2>
+    <Card >
+        <EventName >{name}</EventName>
         <p className={css.info}>
             <FaMapMarkerAlt className={css.icon} size={iconSize.sm}/>
             {location}</p>
@@ -34,7 +35,7 @@ export const Event = ({name,location,speaker,type,start,end}) => {
             {duration}</p>
             <span className={`${css.chip} ${css[type]}`}>{type}</span>
 
-    </div>)
+    </Card>)
 };
 
 Event.propTypes = {
