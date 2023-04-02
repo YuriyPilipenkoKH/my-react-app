@@ -2,8 +2,10 @@ import PropTypes from 'prop-types'
 import css from './Event.module.css'
 import { FaMapMarkerAlt, FaUserAlt, FaUserTie, FaCalendarAlt, FaClock } from 'react-icons/fa';
 import { FcCalendar, FcClock } from 'react-icons/fc';
-import {formatEventStart } from 'utils/formatEventStart'
-import {formatEventDuration} from 'utils/formatEventDuration'
+// import {formatEventStart } from 'utils/formatEventStart'
+// import {formatEventDuration} from 'utils/formatEventDuration'
+
+import {formatEventStart, formatEventDuration} from 'utils'
 
 
 export const Event = ({name,location,speaker,type,start,end}) => {
