@@ -23,7 +23,7 @@ export const EventName = styled.h2`
 
 export const Info = styled.p`
     display: flex;
-    gap:8px;
+    gap:8px; 
     align-items: center;
     margin: 0;
     color: var(--color-primary-text);
