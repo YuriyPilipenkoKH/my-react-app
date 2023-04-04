@@ -35,6 +35,7 @@ export const Info = styled.p`
 `;
 
 export const Chip = styled.span`
+
   position: absolute;
   top: 4px;
   right: 4px;
@@ -55,3 +56,8 @@ export const Chip = styled.span`
     }
   }};
 `;
+
+
+    
+
+
