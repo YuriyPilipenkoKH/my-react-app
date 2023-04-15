@@ -1,7 +1,7 @@
 import  PropTypes  from "prop-types"
 // import defaultImg  from "./drop.jpg";
 
-const Painting = ({id,url,title,authorName='unknown',price,profileUrl,quantity}) => {
+const Painting = ({id, url, title, authorName='unknown', price,profileUrl, quantity}) => {
 
     return (<div>
     <img src={url} alt={title} width="480"/>
@@ -16,9 +16,9 @@ const Painting = ({id,url,title,authorName='unknown',price,profileUrl,quantity})
     }
     
     Painting.propTypes = {
-        url: PropTypes.string.isRequired,
+        url: PropTypes.string,
         title: PropTypes.string.isRequired,
-        authorName: PropTypes.string.isRequired,
+        authorName: PropTypes.string,
         price: PropTypes.number.isRequired,
         quantity: PropTypes.number.isRequired,
     }

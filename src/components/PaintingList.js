@@ -7,9 +7,9 @@ function PaintingList({ items }) {
       {items.map(item => (
         <li key={item.id}>
           <Painting
-            imageUrl={item.url}
+            url={item.url}
             title={item.title}
-            author={item.author.tag}
+            authorName={item.author.tag}
             profileUrl={item.author.url}
             price={item.price}
             quantity={item.quantity}
