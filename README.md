@@ -1,70 +1,145 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# react-group-33
+- [react-icons](https://react-icons.github.io/react-icons/)
+- [date-fns](https://date-fns.org/)
+- [prop-types](https://www.npmjs.com/package/prop-types)
+## Components
+### Page title
+```html
+<h1 class="title">Text</h1>
+```
+```css
+.title {
+  margin-top: 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+```
+### EventBoard
+```html
+<div class="eventBoard">Event cards</div>
+```
+```css
+.eventBoard {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, auto));
+  gap: 24px;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+```
+### Event
+```html
+<div class="event">
+  <h2 class="title">{name}</h2>
+  <p class="info">
+    <i class="icon"></i>
+    Location
+  </p>
+  <p class="info">
+    <i class="icon"></i>
+    Speaker
+  </p>
+  <p class="info">
+    <i class="icon"></i>
+    Start Date
+  </p>
+  <p class="info">
+    <i class="icon"></i>
+    Duration
+  </p>
+  <span class="chip free|paid|vip">Event type</span>
+</div>
+```
+Icons:
+- FaMapMarkerAlt
+- FaUserAlt
+- FaCalendarAlt
+- FaClock
+```css
+.event {
+  position: relative;
+  border: 2px dashed black;
+  padding: 8px;
+  border-radius: 4px;
+}
+.title {
+  margin-top: 0;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+.info {
+  display: flex;
+  align-items: center;
+  margin-top: 0;
+  margin-bottom: 8px;
+  color: var(--color-primary-text);
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  letter-spacing: 0.25px;
+}
+.icon {
+  display: block;
+  margin-right: 8px;
+  color: var(--color-secondary-text);
+}
+.chip {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  background-color: #000;
+  color: #fff;
+}
+.free {
+  background-color: var(--color-green);
+}
+.paid {
+  background-color: var(--color-blue);
+}
+.vip {
+  background-color: var(--color-red);
+}
+```
+## Utils
+```js
+import { format, formatDistanceStrict } from 'date-fns';
+const formatEventStart = start => {
+  return format(Date.parse(start), 'dd MMMM yyyy, HH:mm');
+};
+const formatEventDuration = (start, end) => {
+  return formatDistanceStrict(Date.parse(start), Date.parse(end));
+};
+```
+```
+import Z from 'common/components/Z'
+import X from 'common/components/X'
+import Y from 'common/components/Y'
+import {Z, X, Y} from 'common/components'
+src
+  modules
+    common
+      components
+        Z
+        X
+        Y
+        index.js
+    courses
+      components
+        A
+        B
+        C
+    groups
+      components
+        D
+        E
+    homeworks
+      components
+        F
+```
+Сверн
