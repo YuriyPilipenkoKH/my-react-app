@@ -6,5 +6,5 @@ export const PageTitle = ({ text }) => {
 };
 
 PageTitle.propType = {
-    text: PropTypes.string
+    text: PropTypes.string.isRequired,
 }
