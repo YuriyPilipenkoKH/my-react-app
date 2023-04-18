@@ -11,3 +11,30 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+.profile {
+  width: 400px;
+  text-align: center;
+  padding: 10px;
+  margin: 0 auto;
+  background: #26f5;
+}
+
+.avatar {
+  width: 200px;
+}
+.stats {
+list-style: none;
+padding: 0;
+display: flex;
+gap:16px;
+justify-content: center;
+
+}
+
+.stats >li {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}

@@ -1,5 +1,6 @@
 import { Description } from '../description/Description'
 import PropTypes from 'prop-types';
+import {Stats} from '../stats/stats'
 
 export const Profile = ({ user} ) => {
     const { username, tag, location, avatar, stats } = user;
@@ -12,8 +13,13 @@ export const Profile = ({ user} ) => {
         location={location}
         avatar={avatar}
       ></Description>
+      <Stats
+        followers={stats.followers}
+        views={stats.views}
+        likes={stats.likes}
+      ></Stats>
     </div>
-  )
+  );
    
 }
 
