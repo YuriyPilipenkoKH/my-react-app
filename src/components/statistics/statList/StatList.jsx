@@ -3,30 +3,20 @@ import PropTypes from 'prop-types';
 
 export const StatList = ({id, label, percentage}) => {
     return (
-      <ul className="stat-list " key = {id}>
-        <li className="item">
-          <span className="label">{label}</span>
-          <span className="percentage">{percentage}</span>
-        </li>
-        <li className="item">
-          <span className="label">{label}</span>
-          <span className="percentage">{percentage}</span>
-        </li>
-        <li className="item">
-          <span className="label">{label}</span>
-          <span className="percentage">{percentage}</span>
-        </li>
-        <li className="item">
-          <span className="label">{label}</span>
-          <span className="percentage">{percentage}</span>
-        </li>
-      </ul>
+      <li className="item" id={id}>
+        <span className="label" label={label}>
+          {label}
+        </span>
+        <span className="percentage" percentage={percentage}>
+          {percentage}
+        %</span>
+      </li>
     );
 }
 
-StatList.propTypes.exact({
-  text: PropTypes.string.isRequired,
-  id: PropTypes.string.isRequired,
-  label: PropTypes.string.isRequired,
+StatList.propTypes ={
+  
+  id: PropTypes.string,
+  label: PropTypes.string,
   percentage: PropTypes.number.isRequired,
-});
+};
