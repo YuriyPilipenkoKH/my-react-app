@@ -3,20 +3,14 @@ import PropTypes from 'prop-types';
 
 export const StatList = ({id, label, percentage}) => {
     return (
-      <li className="item" id={id}>
-        <span className="label" label={label}>
-          {label}
-        </span>
-        <span className="percentage" percentage={percentage}>
-          {percentage}
-        %</span>
+      <li className="item" >
+        <span className="label" >{label}</span>
+        <span className="percentage">{percentage}%</span>
       </li>
     );
 }
 
-StatList.propTypes ={
-  
-  id: PropTypes.string,
-  label: PropTypes.string,
+StatList.propTypes = {
+  label: PropTypes.string.isRequired,
   percentage: PropTypes.number.isRequired,
 };
