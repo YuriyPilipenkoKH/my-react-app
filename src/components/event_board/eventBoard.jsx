@@ -11,7 +11,7 @@ export const EventBoard = ({ events }) => {
             speaker,
             type,
             time
-        }) => (
+        }) => 
         <Event
          key= {name}
          name= {name}
@@ -22,7 +22,7 @@ export const EventBoard = ({ events }) => {
          end= {time.end}
          > 
         </Event>
-        ))}
+        )}
     </div>
 }
 
