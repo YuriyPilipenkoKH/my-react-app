@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
-// import { Card, userName, userEmail, place } from './Description.styled';
+
+import { Avatar, UserName, UserEmail, Place } from './Description.styled';
 
 export const Description = ({username, tag, location, avatar}) => {
    
@@ -7,14 +8,14 @@ export const Description = ({username, tag, location, avatar}) => {
    
     return (
       <div className="description">
-        <img
+        <Avatar
                 src={ avatar}
           alt={ username}
           className="avatar"
         />
-            <p className="name">{ username}</p>
-            <p className="tag">{ tag}</p>
-            <p className="location">{ location}</p>
+            <UserName className="name">{ username}</UserName>
+            <UserEmail className="tag">{ tag}</UserEmail>
+            <Place className="location">{ location}</Place>
       </div>
     );
 }

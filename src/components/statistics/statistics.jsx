@@ -3,11 +3,11 @@ import {Title} from './title/Title'
 import { StatList } from './statList/StatList'
 
 
-export const Statistics = ({statistics, title}) => {
+export const Statistics = ({statistics, title, children}) => {
     const { id , label, percentage} = statistics
     return (
       <section className="statistics" key={id}>
-        {title && <h2 className="title">{title}</h2>}
+        {title && <Title >{title}</Title>}
         <ul className="stat-list">
           {statistics.map(({ id, label, percentage }) => (
               <StatList

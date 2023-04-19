@@ -1,6 +1,6 @@
-import { Description } from '../description/Description'
+import { Description } from './description/Description'
 import PropTypes from 'prop-types';
-import {Stats} from '../stats/stats'
+import {Stats} from './stats/stats'
 
 export const Profile = ({ user} ) => {
     const { username, tag, location, avatar, stats } = user;
