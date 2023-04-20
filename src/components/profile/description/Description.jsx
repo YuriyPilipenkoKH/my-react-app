@@ -13,7 +13,7 @@ export const Description = ({username, tag, location, avatar}) => {
           alt={ username}
           className="avatar"
         />
-            <UserName className="name">{ username}</UserName>
+            <UserName >{ username}</UserName>
             <UserEmail className="tag">{ tag}</UserEmail>
             <Place className="location">{ location}</Place>
       </div>

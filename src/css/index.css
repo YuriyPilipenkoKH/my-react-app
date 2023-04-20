@@ -130,6 +130,7 @@ border-right: 1px solid #999 ;
   text-align: center;
   padding: 20px;
   background: #c3c3c388 ;
+  border-radius: 8px 8px 0 0;
 }
 
 .stat-list {
@@ -142,17 +143,20 @@ border-right: 1px solid #999 ;
 
 }
 
-.item {
-  /* width: 100%;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  padding: 20px 0;
-  border-right: 1px solid #999 ;
-  background-color: #ff0; */
+.friend-list {
+  display: grid;
+  gap: 12px;
 }
 
-/* .item:last-child {
-  border-right: none;
-} */
+.friends-item {
+  outline: 1px solid grey;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 30px;
+  border-radius: 8px;
+ }
+
+ .friends-item > p {
+  font-size: 32px;
+ }
