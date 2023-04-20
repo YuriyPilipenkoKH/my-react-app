@@ -8,9 +8,9 @@ import { Statistics } from '../components/statistics/statistics'
 export const App = () => {
 
   return (
-    <div>
+    <div className='wrapper'>
       <Profile user={user}></Profile>
-      <Statistics statistics={statistics} title=""></Statistics>
+      <Statistics statistics={statistics} title="upload stats"></Statistics>
     </div>
   );
   };
