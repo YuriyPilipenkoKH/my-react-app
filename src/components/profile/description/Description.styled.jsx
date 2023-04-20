@@ -1,10 +1,8 @@
 import styled  from '@emotion/styled';
 
 export const Avatar = styled.img`
-  width: 150px;
-  border-radius: 50%;
+  width: 200px;
   padding: 12px;
-  background: #7774;
   margin: 0 auto;
 `
 
