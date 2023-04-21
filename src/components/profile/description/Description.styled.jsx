@@ -1,8 +1,15 @@
 import styled  from '@emotion/styled';
 
+export const ProfileDescription = styled.div`
+  display: grid;
+  grid-auto-rows: auto;
+  grid-row-gap: 8px;
+  padding: 16px;
+
+`
+
 export const Avatar = styled.img`
   width: 200px;
-  padding: 12px;
   margin: 0 auto;
 `
 

@@ -1,22 +1,19 @@
 import PropTypes from 'prop-types';
 
-import { Avatar, UserName, UserEmail, Place } from './Description.styled';
+import {ProfileDescription, Avatar, UserName, UserEmail, Place } from './Description.styled';
 
 export const Description = ({username, tag, location, avatar}) => {
-   
-
-   
+  
     return (
-      <div className="description">
+      <ProfileDescription >
         <Avatar
-                src={ avatar}
+          src={ avatar}
           alt={ username}
-          className="avatar"
         />
             <UserName >{ username}</UserName>
-            <UserEmail className="tag">{ tag}</UserEmail>
-            <Place className="location">{ location}</Place>
-      </div>
+            <UserEmail >{ tag}</UserEmail>
+            <Place >{ location}</Place>
+      </ProfileDescription>
     );
 }
 

@@ -64,11 +64,4 @@ code {
 
 
 
-.description {
-  display: grid;
-  grid-auto-rows: auto;
-  grid-row-gap: 8px;
-  padding: 16px;
-}
-
 
