@@ -129,11 +129,11 @@ border-right: 1px solid #999 ;
   font-weight: 600;
 }
 
-.wrapper {
+/* .wrapper {
   display: grid;
   justify-content: center;
   gap: 40px;
-}
+} */
 
 .statistics {
   border-radius: 10px;
