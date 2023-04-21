@@ -6,7 +6,7 @@ import { FriendList } from './FriendList.styled';
 export const FriendsList = ({friends}) => {
 
     return (
-        <FriendList className="friends-list" >
+        <FriendList className="friends_list" >
             {friends.map(({id, name , avatar, isOnline}) => (
                 <FriendListItem
                 key={id}
