@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-
+import { randomColor } from 'utils/randomColor';
 
 export const StItem = styled.li`
   width: 100%;
@@ -10,8 +10,9 @@ export const StItem = styled.li`
   gap: 8px;
   padding: 20px 0;
   border-right: 1px solid #000 ;
+  /* background-color: ${randomColor()}; */
 
-  :first-child {
+  :first-of-type {
     border-radius: 0 0 0 8px ;
   }
   

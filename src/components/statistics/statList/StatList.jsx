@@ -7,7 +7,7 @@ import { List } from './StatList.syled';
 export const StatList = ({data}) => {
 
     return (
-      <List className="stat-list">
+      <List >
       {data.map(({ id , label, percentage}) => (
        <StatItem
        key={id}
@@ -23,12 +23,15 @@ export const StatList = ({data}) => {
 
 
 StatList.propTypes = {
-  data:arrayOf(
+  data: PropTypes.arrayOf(
     PropTypes.exact({
-      // label: PropTypes.string.isRequired,
-        // percentage: PropTypes.number.isRequired,
+      id: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired,
+      percentage: PropTypes.number.isRequired,
     })
   )
-//   label: PropTypes.string.isRequired,
-//   percentage: PropTypes.number.isRequired,
+
 };
+
+  // label: PropTypes.string.isRequired,
+  // percentage: PropTypes.number.isRequired,

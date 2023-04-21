@@ -3,8 +3,6 @@ import {FriendListItem} from './FriendListItem/FriendListItem'
 
 
 export const FriendsList = ({friends}) => {
-    // console.log(friends);
-    // const {id, name , avatar, isOnline} = friends
 
     return (
         <ul className="friend-list" >
