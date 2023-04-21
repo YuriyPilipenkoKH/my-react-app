@@ -104,6 +104,18 @@ border-right: 1px solid #999 ;
 
 }
 
+ .st-item {
+/* font-size: 18px; */
+ }
+
+.st-label {
+
+}
+
+.st-percentage {
+  font-weight: 700;
+}
+
 .stats >li:last-child {
   border-right: none;
 }
@@ -127,14 +139,14 @@ border-right: 1px solid #999 ;
   border-radius: 10px;
 }
 
-.title {
+/* .title {
   text-align: center;
   padding: 20px;
   background: #c3c3c388 ;
   border-radius: 8px 8px 0 0;
-}
+} */
 
-.stat-list {
+/* .stat-list {
   width: 100%;
   display: grid;
   align-items: center;
@@ -142,7 +154,7 @@ border-right: 1px solid #999 ;
   grid-template-columns: repeat(5, minmax(20%,90px));
   justify-items: center;
 
-}
+} */
 
 .friend-list {
   display: grid;

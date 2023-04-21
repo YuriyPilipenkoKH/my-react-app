@@ -12,7 +12,7 @@ export const App = () => {
   return (
     <div className='wrapper'>
       <Profile user={user}></Profile>
-      <Statistics statistics={statistics} title="upload stats"></Statistics>
+      <Statistics statistics={statistics} title="Upload stats"></Statistics>
       <FriendsList friends={friends}></FriendsList>
     </div>
   );

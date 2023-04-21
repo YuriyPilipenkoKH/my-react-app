@@ -1,25 +1,34 @@
 import PropTypes from 'prop-types';
-import { Item } from './StatList.syled.jsx';
-
-function randomColor() {
-   
-  return  ('#'+ Math.floor(Math.random()*16777215).toString(16))
-}   ;
+import { StatItem } from '../statItem/StatItem';
+import { List } from './StatList.syled';
 
 
-export const StatList = ({id, label, percentage}) => {
+
+export const StatList = ({data}) => {
+
     return (
-        <>
-        <Item className="item" style= {{backgroundColor: randomColor() }}>
-        <span className="label" >{label}</span>
-        <span className="percentage">{percentage}%</span>
-        </Item>
-        </>
-     
-    );
+      <List className="stat-list">
+      {data.map(({ id , label, percentage}) => (
+       <StatItem
+       key={id}
+       label= {label}
+       percentage= {percentage}
+       ></StatItem>
+      ))}
+       </List>
+    )
 }
 
+
+
+
 StatList.propTypes = {
-  label: PropTypes.string.isRequired,
-  percentage: PropTypes.number.isRequired,
+  data:arrayOf(
+    PropTypes.exact({
+      // label: PropTypes.string.isRequired,
+        // percentage: PropTypes.number.isRequired,
+    })
+  )
+//   label: PropTypes.string.isRequired,
+//   percentage: PropTypes.number.isRequired,
 };
