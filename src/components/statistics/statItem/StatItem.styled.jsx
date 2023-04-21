@@ -1,5 +1,4 @@
 import styled from '@emotion/styled';
-import { randomColor } from 'utils/randomColor';
 
 export const StItem = styled.li`
   width: 100%;
@@ -9,8 +8,7 @@ export const StItem = styled.li`
   flex-direction: column;
   gap: 8px;
   padding: 20px 0;
-  border-right: 1px solid #000 ;
-  /* background-color: ${randomColor()}; */
+  border-right: 1px solid #777 ;
 
   :first-of-type {
     border-radius: 0 0 0 8px ;
@@ -27,5 +25,6 @@ export const StLabel = styled.span`
     font-weight: 500;
 `
 export const StPercentage = styled.span`
+    font-size: 22px;
     font-weight: 700;
 `

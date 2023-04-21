@@ -16,8 +16,3 @@ StatItem.propTypes = {
       percentage: PropTypes.number.isRequired,
 }
 
-// StatList.propTypes = {
-//   label: PropTypes.string.isRequired,
-//   percentage: PropTypes.number.isRequired,
-// };
-

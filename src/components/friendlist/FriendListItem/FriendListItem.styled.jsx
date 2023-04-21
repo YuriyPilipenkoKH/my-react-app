@@ -1,23 +1,27 @@
 import styled from '@emotion/styled';
 
 
-export const Friends = styled.ul`
-    display: flex;
-  flex-direction: column;
+
+export const FriendItem = styled.li`
+    
+  
+  display: flex;
   align-items: center;
+  gap: 24px;
+  padding: 30px;
+  border-radius: 8px;
+  background: #f5f5dc;
+  border: 1px solid #000;
+
+  > p {
+    font-size: 32px;
+    font-weight:500;
+ }
+
 `
-// export const ItemFriend =styled.li`
-//     width: ${props => props.theme.spacing(100)};
-//   padding: ${props => props.theme.fontSize(4)};
-//   display: flex;
-//   align-items: center;
-//   background-color: ${props => props.theme.colors.purple};
-//   margin-bottom: ${props => props.theme.spacing(5)};
-//   border-radius: ${props => props.theme.spacing(3)};
-//   &:last-child {
-//   margin-bottom: 0;
-// }
-// `
+export const Picture = styled.img`
+    width: 48px;
+`
 
 export const Status = styled.span`
   width: ${props => props.theme.spacing(5)};
@@ -30,5 +34,5 @@ export const Status = styled.span`
             return props => props.theme.colors.red
         }
     }
-} 
-`
+}`
+
