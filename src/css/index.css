@@ -64,28 +64,32 @@ code {
 
 
 
+/* th {
+  font-size: 22px;
+  padding: 20px 0;
+} */
 
 
-
-td {
+/* td {
+  font-size: 18px;
   border: 1px solid #999;
-  padding: 0.5rem  2em;
+  padding: 1rem  2em;
   text-align: center;
 
 }
  
 td:first-of-type {
   text-align: left;
-}
+} */
 
 tr {
   /* text-align: center; */
   text-transform: capitalize;
 }
-
+/* 
  tr:nth-of-type(even) {
   background-color: #43a3e355;
-}
+} */
 
  tr:last-of-type {
   border-bottom: 2px solid #009879;
