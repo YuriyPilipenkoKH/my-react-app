@@ -1,13 +1,29 @@
 
+.wrapper {
+width: 100%;
+display: flex;
+justify-content: center;
+gap: 12px;
+}
+
 .ColorPicker__option {
     display: inline-block;
       width: 40px;
       height: 40px;
-      border: 2px solid black;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      
+      transition: transform 250ms linear;
     }
+    
+.ColorPicker__option-active {
+  transform: scale(1.2);
+}
 
 .ColorPicker__title {
  color: teal;
+ padding: 22px;
  text-align: center;
  margin: 0;
 }
