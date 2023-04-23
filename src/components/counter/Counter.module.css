@@ -1,0 +1,36 @@
+.Counter {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap: 20px;
+padding: 20px;
+margin: 0 auto;
+}
+
+.Counter__value {
+    font-size: 32px;
+    font-weight: 800;
+    color: #777;
+}
+
+.Counter__controls {
+display: flex;
+gap: 20px;
+}
+
+.Counter__controls >button {
+    font-size: 22px;
+    padding: 4px 22px;
+    border-radius: 8px;
+    border: transparent;
+     background-color: #2196f3;
+}
+
+.clear__btn {
+    font-size: 22px;
+    padding: 4px 32px;
+    border-radius: 8px;
+    border: transparent;
+    background-color: #21f3c9;
+}
