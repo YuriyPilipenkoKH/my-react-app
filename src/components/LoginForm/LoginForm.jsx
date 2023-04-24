@@ -1,23 +1,41 @@
 import PropTypes from 'prop-types';
+import { Formik, Form, Field} from 'formik';
+import {FormCard} from  './LoginForm.styled'
+import { handleSubmit } from '../../utils/submit';
 
 export const LoginForm =() => {
-    const handleSubmit =(e) => {
-        e.preventDefault()
-      console.log(e.target);
-}
+    // const handleSubmit =(e) => {
+    //     e.preventDefault()
+    //     const {login, password} = e.target.elements;
+    //     console.log(login.value); 
+
+    //   console.log(e.target.elements.login.value);
+    //   console.log(e.target.elements.password.value);
+
+    const initialValues= {
+        login: 'Yura',
+        password: '',
+    }
+
       return (
-     
-        <form autoComplete='off' onSubmit={handleSubmit}>
+     <Formik 
+     initialValues={initialValues}
+     onSubmit={handleSubmit}
+     >
+         <FormCard autoComplete='off' >
             <label htmlFor='login'>
                 Login
-                <input type='text' name='login'/>
+                <Field type='text' name='login'/>
             </label>
             <label htmlFor='password'>
                 Password
-                <input type='text' name='password'/>
+                <Field type='password' name='password'/>
             </label>
             <button type='submit'>Submit</button>
-        </form>
+        </FormCard>
+
+     </Formik>
+       
       )
     
 }
