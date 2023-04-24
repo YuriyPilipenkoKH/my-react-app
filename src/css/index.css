@@ -11,3 +11,19 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+.ColorPicker__option {
+  display: inline-block;
+    width: 40px;
+    height: 40px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    
+    transition: transform 250ms linear;
+  }
+  
+.ColorPicker__option-active {
+transform: scale(1.2);
+}

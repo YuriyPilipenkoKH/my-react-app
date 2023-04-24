@@ -5,7 +5,7 @@ import s from './colorPicker.module.css'
 class ColorPicker extends Component {
 
     state = {
-        activeOptionIdx: 1,  
+        activeOptionIdx: 0,  
     }
 
     makeOptionClassName =(idx) => {
@@ -17,6 +17,12 @@ class ColorPicker extends Component {
         return optionClasses.join(' ')
      }
 
+     setActiveIdx=(idx) => {
+        this.setState({
+            activeOptionIdx: idx,
+        })
+     }
+z
     render () {
         return   (<div className="ColorPicker">
         <h2 className={s.ColorPicker__title}>COLOR PICKER</h2>
@@ -31,6 +37,7 @@ class ColorPicker extends Component {
                 style={{
                     backgroundColor: color,
                 }}
+                onClick = {()=> this.setActiveIdx(idx)}
                 ></button>                    
                 )
             })}
