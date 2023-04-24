@@ -8,7 +8,11 @@ export class App extends Component {
 render() {
 
   return (
-    <Section title ="Formik" >
-        <LoginForm/>
-    </Section>  
-    );}  };
+    // <Section title ="Formik" children>
+   
+    <LoginForm/>
+    // {/* </Section> */}
+
+   
+    )}  
+};

@@ -4,8 +4,9 @@ export const LoginForm =() => {
     const handleSubmit =(e) => {
         e.preventDefault()
       console.log(e.target);
-
+}
       return (
+     
         <form autoComplete='off' onSubmit={handleSubmit}>
             <label htmlFor='login'>
                 Login
@@ -18,5 +19,5 @@ export const LoginForm =() => {
             <button type='submit'>Submit</button>
         </form>
       )
-    }
+    
 }
