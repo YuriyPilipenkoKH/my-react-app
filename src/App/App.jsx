@@ -3,6 +3,7 @@ import { Container } from '../components/container/Container';
 import { Section } from "../components/section/Section";
 import { ContactForm } from '../components/ContactForm/ContactForm';
 import shortid from 'shortid';
+import { nanoid } from "nanoid";
 
 export class App extends Component {
   state = {

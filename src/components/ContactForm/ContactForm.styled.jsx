@@ -1,37 +1,34 @@
 import styled from '@emotion/styled';
-import {  Form} from 'formik';
 
-export const FormCard = styled(Form)`
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    border: 4px solid #777;
-    padding: 16px;
-    >label {
-        display: flex;
-        flex-direction: column;
-        >input {
-            font-size: 14px;
-            padding: 8px;
-            outline: none;
-           
-        }
-    }
-    >button {
-        font-size: 18px;
-        font-weight: 700;
-        padding: 8px 16px;
-        max-width: 150px;
-        border-radius: 10px;
-        border: transparent;
-        color: #333;
-        background-color: #2196f3;
-        cursor: pointer;
-        transition: 400ms ease-in-out;
-        :hover,
-        :focus {
-            background-color: #17a;
-            color: #eee;
-        }
-    }
-`
+
+export const Input = styled.input`
+  border-radius: 4px;
+  padding: 5px;
+  border: 2px solid rgba(33, 33, 33, 0.2);
+  &:hover,
+  &:active,
+  &:focus-visible {
+    border-color: violet;
+    border: 2px solid violet;
+    outline: none;
+  }
+`;
+
+export const Form = styled.form`
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+`;
+export const Label = styled.label`
+  font-size: 18px;
+  margin-right: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+`;
+
+
+export const ContactFormBtn = styled.button`
+  margin-left: auto;
+  margin-right: auto;
+`;
