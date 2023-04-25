@@ -21,7 +21,7 @@ export const FormCard = styled(Form)`
         font-size: 18px;
         font-weight: 700;
         padding: 8px 16px;
-        max-width: 120px;
+        max-width: 150px;
         border-radius: 10px;
         border: transparent;
         color: #333;

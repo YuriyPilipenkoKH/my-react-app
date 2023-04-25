@@ -1,39 +1,90 @@
+import React, { Component } from 'react';
 import { Formik, Field, ErrorMessage } from 'formik';
 import * as yup from 'yup';
 import { handleSubmit } from '../../utils/submit';
 import { FormCard } from './ContactForm.styled';
+// import { nanoid } from 'nanoid';
 
 
-const schema = yup.object().shape({
-    name: yup.string().required(),
+// let id = nanoid()
+// console.log(id);
 
-})
 
-export const ContactForm =() => {
 
-    const initialValues= {
+
+export class ContactForm extends Component  {
+    state = {
+        contacts: [],
         name: '',
+        number: ''
+      }
 
+       schema = yup.object().shape({
+        name: yup.string().required(),
+        number: yup.number().required(),
+    
+    })
+
+     initialValues= {
+        name: '',
+        number: '',
     }
 
-      return (
-     <Formik 
-     initialValues={initialValues}
-     onSubmit={handleSubmit}
-     validationSchema={schema}
-     >
-         <FormCard autoComplete='off' >
-            <label htmlFor='name'>
-                Name
-                <Field type='text' name='name'/>
-                <ErrorMessage name="name" component="div"/>
-            </label>
-          
-            <button type='submit'>Submit</button>
-        </FormCard>
+    handleChange = name => e => {
+        const { target } = e;
+    
+        this.setState(() => ({
+          [name]: target.value,
+        }));
+      };
 
-     </Formik>
+      handleSubmit = e => {
+        e.preventDefault();
+    
+        const { onSubmit } = this.props;
+        onSubmit(this.state);
+        this.resetForm();
+      };
+
+      resetForm = () => {
+        this.setState(() => ({
+          name: '',
+          number: '',
+        }));
+      };
+
+
+      render() {
+        return(
+            <Formik 
+            initialValues={this.initialValues}
+            onSubmit={handleSubmit}
+            validationSchema={this.schema}
+            >
+                <FormCard autoComplete='off' >
+                   <label htmlFor='name'>
+                       Name
+                       <Field type='text' name='name'/>
+                       <ErrorMessage name="name" component="div"/>
+                   </label>
+                   <label htmlFor='number'>
+                       Number
+                       <Field type='text' name='number'/>
+                       <ErrorMessage name="number" component="div"/>
+                   </label>
+                 
+                   <button type='submit'>Add contact</button>
+               </FormCard>
        
-      )
+            </Formik>
+
+        )
+      } 
+
+
+    //   return (
+
+       
+    //   )
     
 }
