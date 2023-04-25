@@ -1,16 +1,10 @@
 import React, { Component } from 'react';
 import { Formik, Field, ErrorMessage } from 'formik';
 import * as yup from 'yup';
-import { handleSubmit } from '../../utils/submit';
 import { FormCard } from './ContactForm.styled';
 // import { nanoid } from 'nanoid';
-
-
 // let id = nanoid()
 // console.log(id);
-
-
-
 
 export class ContactForm extends Component  {
     state = {
@@ -19,13 +13,12 @@ export class ContactForm extends Component  {
         number: ''
       }
 
-       schema = yup.object().shape({
+    schema = yup.object().shape({
         name: yup.string().required(),
         number: yup.number().required(),
-    
     })
 
-     initialValues= {
+    initialValues= {
         name: '',
         number: '',
     }
@@ -36,29 +29,30 @@ export class ContactForm extends Component  {
         this.setState(() => ({
           [name]: target.value,
         }));
-      };
+    };
 
-      handleSubmit = e => {
+    handleSubmit ( e)  {
         e.preventDefault();
     
         const { onSubmit } = this.props;
         onSubmit(this.state);
         this.resetForm();
-      };
+        console.log(this.state);
+    };
 
-      resetForm = () => {
+    resetForm = () => {
         this.setState(() => ({
           name: '',
           number: '',
         }));
-      };
+    };
 
 
-      render() {
+    render() {
         return(
             <Formik 
             initialValues={this.initialValues}
-            onSubmit={handleSubmit}
+            onSubmit={this.handleSubmit}
             validationSchema={this.schema}
             >
                 <FormCard autoComplete='off' >
@@ -79,12 +73,6 @@ export class ContactForm extends Component  {
             </Formik>
 
         )
-      } 
-
-
-    //   return (
-
-       
-    //   )
+    } 
     
 }
