@@ -9,14 +9,10 @@ render() {
 
   return (
     <Container>
-   <Section title ="Phone Book" >
-   
-
-    </Section>
+   <Section title ="Phonebook" > </Section>
 
     </Container>
 
 
-   
-    )}  
+       )}  
 };
