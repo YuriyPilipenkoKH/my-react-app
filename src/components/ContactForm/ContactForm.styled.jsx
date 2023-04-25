@@ -1,16 +1,42 @@
-import styled from '@emotion/styled';
+import styled, { css} from 'styled-components';
+
+const baseLiStyles = css`
+  
+    font-family: inherit;
+    font-size: 16px;
+    line-height: 17px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 16px;
+
+    height: 40px;
+    color: var(--black);
+    background-color: var(--yellow);
+    border:  transparent;
+    border-radius: 10px;
+    box-shadow: var(--shadow-four);
+`;
+export default baseLiStyles
+
 
 
 export const Input = styled.input`
-  border-radius: 4px;
-  padding: 5px;
-  border: 2px solid rgba(33, 33, 33, 0.2);
+  height: 40px;
+  width: 280px;
+  border-radius: 10px;
+  padding:4px 16px;
+  background-color: var(--beige);
+  border: transparent;
+  box-shadow: var(--shadow-four);
+
   &:hover,
   &:active,
   &:focus-visible {
-    border-color: violet;
-    border: 2px solid violet;
-    outline: none;
+   
+    outline: 2px solid var(--orange);
+    box-shadow: var(--shadow-two);
   }
 `;
 
@@ -18,17 +44,33 @@ export const Form = styled.form`
   display: flex;
   flex-direction: column;
   gap: 20px;
+
 `;
+
+
 export const Label = styled.label`
   font-size: 18px;
-  margin-right: 30px;
+  font-weight: 500;
   display: flex;
+  flex-direction: column;
+  gap: 4px;
   justify-content: space-between;
   align-items: baseline;
 `;
 
 
 export const ContactFormBtn = styled.button`
-  margin-left: auto;
-  margin-right: auto;
+  ${baseLiStyles};
+  justify-content: center;
+  width: 160px;
+  cursor: pointer;
+    transition: all 0.4s;
+
+  &:hover,
+  &:focus {
+    outline:none;
+    background-color: var(--green);
+    color: #fbf7f3;
+    box-shadow: var(--shadow-two); 
+  }
 `;

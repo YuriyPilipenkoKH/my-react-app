@@ -1,16 +1,17 @@
-import { FilterInput } from './Filter.styled';
+import { Input ,  Label} from '../ContactForm/ContactForm.styled';
 import { PropTypes } from 'prop-types';
 
 export const Filter = ({ value, onFilterChange }) => (
   <>
-    <label>
-      <FilterInput
+    <Label>
+      Find contacts by name
+      <Input
         type="text"
         value={value}
         onChange={onFilterChange}
-        placeholder="Name or phone to seach..."
+        // placeholder="Name or phone to seach..."
       />
-    </label>
+    </Label>
   </>
 );
 

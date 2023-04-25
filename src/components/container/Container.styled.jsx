@@ -4,7 +4,7 @@ export const MainContainer = styled.div`
     display: grid;
     justify-items: center;
     align-items: center;
-    grid-gap: 50px;
+    grid-gap: 25px;
     background-color: #cad9d9;
     padding: 16px;
     margin: 0 auto;

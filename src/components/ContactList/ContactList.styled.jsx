@@ -1,15 +1,57 @@
-import styled from '@emotion/styled';
+import styled from 'styled-components';
+import baseLiStyles from '../ContactForm/ContactForm.styled';
 
 export const List = styled.ul`
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  list-style-type: disc;
+
   font-size: 18px;
-  font-weight: 400;
+  font-weight: 500;
+  margin: 0;
+  padding: 0;
 `;
+
 export const ListItem = styled.li`
+
+
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  margin-bottom: 30px;
+  padding: 8px 0;  
+  list-style-type: disc;
 `;
+
+export const ItemCard = styled.span`
+  display: flex;
+  align-items: center;
+
+  height: 40px;
+  border-radius: 10px;
+  padding:4px 16px;
+  /* background-color: var(--blue); */
+  border: 3px solid var(--teal);
+  box-shadow: var(--shadow-four);    
+`
+
 export const ContactListBox = styled.div`
-  width: 400px;
+  width: 450px;
+ 
 `;
+
+export const BtnDelete = styled.button`
+   ${baseLiStyles};
+   justify-content: center;
+   width: 120px;
+   cursor: pointer;
+    transition: all 0.4s;
+
+  &:hover,
+  &:focus {
+    outline:none;
+    background-color: var(--green);
+    color: #fbf7f3;
+    box-shadow: var(--shadow-two); 
+  }
+`

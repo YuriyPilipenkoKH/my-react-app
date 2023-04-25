@@ -1,5 +1,7 @@
-import { List, ListItem, ContactListBox } from './ContactList.styled';
 import { PropTypes } from 'prop-types';
+import { List, ListItem,ItemCard, ContactListBox } from './ContactList.styled';
+import { BtnDelete } from './ContactList.styled';
+
 
 export const ContactList = ({ options, onDeleteContact }) => {
   return (
@@ -7,11 +9,13 @@ export const ContactList = ({ options, onDeleteContact }) => {
       <List>
         {options.map(contact => {
           return (
-            <ListItem key={contact.id}>
-              {contact.name}: {contact.number}
-              <button type="button" onClick={() => onDeleteContact(contact.id)}>
+            <ListItem key={contact.id}><ItemCard> {contact.name}: {contact.number}</ItemCard>
+             
+              <BtnDelete 
+              type="button" 
+              onClick={() => onDeleteContact(contact.id)}>
                 Delete
-              </button>
+              </BtnDelete>
             </ListItem>
           );
         })}
