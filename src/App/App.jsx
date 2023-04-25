@@ -1,5 +1,5 @@
 import {Component} from 'react'
-import { Container } from '../components/container/Container.styled';
+import { Container } from '../components/container/Container';
 import { Section } from "../components/section/Section";
 
 
@@ -9,7 +9,7 @@ render() {
 
   return (
     <Container>
-   <Section title ="Main" children>
+   <Section title ="Main">
    
 
     </Section>
