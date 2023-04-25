@@ -9,7 +9,7 @@ render() {
 
   return (
     <Container>
-   <Section title ="Main" children>
+   <Section title ="Phone Book" >
    
 
     </Section>
