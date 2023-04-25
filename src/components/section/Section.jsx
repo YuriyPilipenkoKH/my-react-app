@@ -1,11 +1,16 @@
 import PropTypes from 'prop-types'
-import { Title } from '../Title/Title'
+import { MainTitle, MainSection } from './Section.styled';
 
-
-export const Section = (props) => {
-   return (
-   <section className='section'>
-    <Title text={props.title}></Title>
-
-    </section>)
-}
+export const Section = ({ title, children }) => {
+    return (
+    <MainSection>
+      <MainTitle>{title}</MainTitle>
+      {children}  
+     </MainSection>)
+ }
+ 
+ Section.propTypes = {
+     title: PropTypes.string.isRequired,
+     children: PropTypes.element,
+   };
+   
