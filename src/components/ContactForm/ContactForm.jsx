@@ -12,8 +12,8 @@ const schema = yup.object().shape({
 export const ContactForm =() => {
 
     const initialValues= {
-        login: '',
-        password: '',
+        name: '',
+
     }
 
       return (
@@ -23,10 +23,10 @@ export const ContactForm =() => {
      validationSchema={schema}
      >
          <FormCard autoComplete='off' >
-            <label htmlFor='login'>
+            <label htmlFor='name'>
                 Name
-                <Field type='text' name='login'/>
-                <ErrorMessage name="login" component="div"/>
+                <Field type='text' name='name'/>
+                <ErrorMessage name="name" component="div"/>
             </label>
           
             <button type='submit'>Submit</button>
