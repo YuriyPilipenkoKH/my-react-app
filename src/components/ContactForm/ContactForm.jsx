@@ -31,7 +31,7 @@ export class ContactForm extends Component  {
         }));
     };
 
-    handleSubmit ( e)  {
+    handleSubmit = e => {
         e.preventDefault();
     
         const { onSubmit } = this.props;
