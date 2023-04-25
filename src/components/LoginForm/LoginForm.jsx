@@ -1,5 +1,5 @@
-import PropTypes from 'prop-types';
-import { Formik, Form, Field, ErrorMessage} from 'formik';
+// import PropTypes from 'prop-types';
+import { Formik,  Field, ErrorMessage} from 'formik';
 import {FormCard} from  './LoginForm.styled'
 import { handleSubmit } from '../../utils/submit';
 import * as yup from 'yup'
