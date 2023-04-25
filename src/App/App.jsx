@@ -1,6 +1,7 @@
 import {Component} from 'react'
 import { Container } from '../components/container/Container';
 import { Section } from "../components/section/Section";
+import { ContactForm } from '../components/ContactForm/ContactForm';
 
 
 
@@ -15,6 +16,7 @@ render() {
   return (
     <Container>
    <Section title = "Phonebook"> 
+   <ContactForm/>
    
    </Section>
 
