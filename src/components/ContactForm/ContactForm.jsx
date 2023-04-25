@@ -4,6 +4,7 @@ import {Input,Form,Label, ContactFormBtn} from './ContactForm.styled';
   
   export class ContactForm extends Component {
     state = {
+    contacts: [],
       name: '',
       number: '',
     };
@@ -17,6 +18,7 @@ import {Input,Form,Label, ContactFormBtn} from './ContactForm.styled';
     handleSubmit = e => {
       e.preventDefault();
       this.props.onSubmit(this.state);
+      
   
       console.log(this.state);
       this.resetForm();
