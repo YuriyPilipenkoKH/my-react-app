@@ -19,9 +19,8 @@ import {Input,Form,Label, ContactFormBtn} from './ContactForm.styled';
     handleSubmit = e => {
       e.preventDefault();
       this.props.onSubmit(this.state);
-
   
-      console.log(this.state);
+    //   console.log(this.state);
       this.resetForm();
     };
   

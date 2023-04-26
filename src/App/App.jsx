@@ -38,8 +38,8 @@ export class App extends Component {
       contacts: [newContact, ...contacts],
     }));
     Notiflix.Notify.success(`Contact added`);
-    console.log(newContact);
-    console.log(this.state.contacts);
+    // console.log(newContact);
+    // console.log(this.state.contacts);
   };
 
   deleteContact = contactId => {
