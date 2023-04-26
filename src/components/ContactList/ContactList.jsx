@@ -4,27 +4,30 @@ import { BtnDelete } from './ContactList.styled';
 
 
 export const ContactList = ({ options, onDeleteContact }) => {
+
   return (
-   
+   options.length !== 0  &&  
     <ContactContainer>
-      <List>
-        {options.map(contact => {
-          return (
-            <ListItem key={contact.id}>
-                <ItemCard
-                className='cardSpan'
-                > {contact.name}: {contact.number}</ItemCard>
-             
-              <BtnDelete 
-              type="button" 
-              onClick={() => onDeleteContact(contact.id)}>
-                Delete
-              </BtnDelete>
-            </ListItem>
-          );
-        })}
-      </List>
-    </ContactContainer>
+    <List>
+      {options.map(contact => {
+        return (
+          <ListItem key={contact.id}>
+              <ItemCard
+              className='cardSpan'
+              > {contact.name}: {contact.number}</ItemCard>
+           
+            <BtnDelete 
+            type="button" 
+            onClick={() => onDeleteContact(contact.id)}>
+              Delete
+            </BtnDelete>
+          </ListItem>
+        );
+      })}
+    </List>
+  </ContactContainer>
+  
+    
   );
 };
 

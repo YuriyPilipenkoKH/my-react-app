@@ -6,6 +6,7 @@ export const Filter = ({ value, onFilterChange }) => (
     <Label>
       Find contacts by name
       <Input
+        className='filter__field'
         type="text"
         value={value}
         onChange={onFilterChange}
