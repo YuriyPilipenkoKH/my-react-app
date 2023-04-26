@@ -9,7 +9,10 @@ export const ContactList = ({ options, onDeleteContact }) => {
       <List>
         {options.map(contact => {
           return (
-            <ListItem key={contact.id}><ItemCard> {contact.name}: {contact.number}</ItemCard>
+            <ListItem key={contact.id}>
+                <ItemCard
+                className='cardSpan'
+                > {contact.name}: {contact.number}</ItemCard>
              
               <BtnDelete 
               type="button" 
