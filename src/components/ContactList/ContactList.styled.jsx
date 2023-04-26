@@ -58,6 +58,10 @@ export const ContactListBox = styled.div`
   border-radius: 10px;
   box-shadow: var(--shadow-four);
   overflow: auto;
+
+  ::-webkit-scrollbar {
+    display: none;
+}
 `;
 
 export const BtnDelete = styled.button`
