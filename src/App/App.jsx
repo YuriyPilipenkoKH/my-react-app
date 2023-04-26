@@ -69,10 +69,14 @@ render() {
 
    <Section title = "Contacts"> 
    <Filter value={filter} onFilterChange={this.filterChange} />
+   {this.state.contacts.length > 0 && 
         <ContactList
-          options={filteredContacts}
-          onDeleteContact={this.deleteContact}
-        />
+        options={filteredContacts}
+        onDeleteContact={this.deleteContact}
+      />
+   
+   }
+        
    
    </Section>
     </Container>

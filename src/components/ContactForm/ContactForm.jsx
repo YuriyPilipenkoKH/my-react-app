@@ -1,3 +1,4 @@
+import { PropTypes } from 'prop-types';
 import React, { Component } from 'react';
 import { nanoid } from 'nanoid';
 import {Input,Form,Label, ContactFormBtn} from './ContactForm.styled';
@@ -66,3 +67,7 @@ import {Input,Form,Label, ContactFormBtn} from './ContactForm.styled';
       );
     }
   }
+
+  ContactForm.propTypes = {
+    onSubmit: PropTypes.func.isRequired,
+}

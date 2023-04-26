@@ -49,7 +49,7 @@ export const ItemCard = styled.span`
   box-shadow: var(--shadow-four);    
 `
 
-export const ContactListBox = styled.div`
+export const ContactContainer = styled.div`
   position: relative;
   width: 550px;
   max-height: 280px;

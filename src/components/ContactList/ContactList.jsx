@@ -1,11 +1,12 @@
 import { PropTypes } from 'prop-types';
-import { List, ListItem,ItemCard, ContactListBox } from './ContactList.styled';
+import { List, ListItem,ItemCard, ContactContainer } from './ContactList.styled';
 import { BtnDelete } from './ContactList.styled';
 
 
 export const ContactList = ({ options, onDeleteContact }) => {
   return (
-    <ContactListBox>
+   
+    <ContactContainer>
       <List>
         {options.map(contact => {
           return (
@@ -23,7 +24,7 @@ export const ContactList = ({ options, onDeleteContact }) => {
           );
         })}
       </List>
-    </ContactListBox>
+    </ContactContainer>
   );
 };
 
