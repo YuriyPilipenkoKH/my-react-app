@@ -1,6 +1,9 @@
 import styled from 'styled-components';
 
 export const Butt = styled.button`
+    position: relative;
+    overflow: hidden;
+
     font-family: inherit;
     font-size: 16px;
     line-height: 17px;
