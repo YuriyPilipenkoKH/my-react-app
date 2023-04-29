@@ -2,7 +2,7 @@ import {Component} from 'react'
 import { Container } from '../components/container/Container.styled';
 import { Section } from "../components/section/Section";
 import Button from '../components/buttons/buttons';
-import { FormOne } from '../components/FormOne/FormOne';
+// import { FormOne } from '../components/FormOne/FormOne';
 
 import ComplexForm from '../components/complexForm/complexForm';
 
@@ -15,7 +15,7 @@ render() {
    <Section title ="Main">
 
     {/* <FormOne></FormOne> */}
-   <ComplexForm></ComplexForm>
+    <ComplexForm onSubmit={values => console.log(values)} />
    <Button>Ripple</Button>
    {/* <Button>Ripple</Button> */}
     </Section>

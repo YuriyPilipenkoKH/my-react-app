@@ -21,7 +21,7 @@ class ComplexForm extends Component {
     evt.preventDefault();
 
     const { login, email, password } = this.state;
-    console.log(`Login: ${login}, Email: ${email}, Password: ${password}`);
+    console.log(`Login: ${login}, Email: ${email}, Password: ${password}`); 
     this.props.onSubmit({ ...this.state });
     this.reset();
   };
