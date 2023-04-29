@@ -8,7 +8,10 @@ export class FormOne extends Component {
     };
 
     handleChange=(e)=> {
-        this.setState({value: e.target.value})
+
+        if(e.target.value.length <= 5) {
+            this.setState({value: e.target.value})
+        }
     }
 
     render() {

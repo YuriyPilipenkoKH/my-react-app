@@ -4,6 +4,8 @@ import { Section } from "../components/section/Section";
 import Button from '../components/buttons/buttons';
 import { FormOne } from '../components/FormOne/FormOne';
 
+import ComplexForm from '../components/complexForm/complexForm';
+
 
 export class App extends Component {
 render() {
@@ -12,8 +14,8 @@ render() {
     <Container>
    <Section title ="Main">
 
-    <FormOne></FormOne>
-   
+    {/* <FormOne></FormOne> */}
+   <ComplexForm></ComplexForm>
    <Button>Ripple</Button>
    {/* <Button>Ripple</Button> */}
     </Section>
