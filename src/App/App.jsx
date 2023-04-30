@@ -3,9 +3,8 @@ import { Container } from '../components/container/Container.styled';
 import { Section } from "../components/section/Section";
 import Button from '../components/buttons/buttons';
 // import { FormOne } from '../components/FormOne/FormOne';
-
-import ComplexForm from '../components/complexForm/complexForm';
-
+// import ComplexForm from '../components/complexForm/complexForm';
+import { FormikLib } from '../components/Formik/Formik';
 
 export class App extends Component {
 render() {
@@ -15,8 +14,9 @@ render() {
    <Section title ="Main">
 
     {/* <FormOne></FormOne> */}
-    <ComplexForm onSubmit={values => console.log(values)} />
-   <Button>Ripple</Button>
+    {/* <ComplexForm onSubmit={values => console.log(values)} /> */}
+    <FormikLib></FormikLib>
+
    {/* <Button>Ripple</Button> */}
     </Section>
    
