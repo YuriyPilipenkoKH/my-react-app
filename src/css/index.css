@@ -84,26 +84,6 @@ li{
 /* =====anim======== */
 
 .btn {
-	position: relative;
-	font-family: inherit;
-	font-size: 1rem;
-	font-weight: 500;
-	line-height: inherit;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	overflow: hidden;
-	text-transform: uppercase;
-	text-rendering: optimizeLegibility;
-
-  padding: 8px 22px;
-  border: none;
-  outline: none;
-  border-radius: 0.25rem;
-  color: var(--color-white);
-  background: var(--color-indigo);
-  box-shadow: var(--shadow-large);
-  cursor: pointer;
 
 }
 
