@@ -1,11 +1,25 @@
-import { Butt } from "../buttons/buttons.styled"
+// import { Butt } from "../buttons/buttons.styled"
 import { Btns } from "./ContactList.styled"
 import { LItem, List } from "./ContactList.styled"
-
+import React, { useState } from "react";
 
 
 export const ContactList = ({ options, onDeleteContact }) => {
-    
+
+    const [items, setItems] = useState(
+        []
+    )
+
+    const handleDelete = id => {
+        setItems(items =>
+          items.map(item => {
+            if (item.id === id) {
+              return { ...item, deleted: true };
+            }
+            return item;
+          })
+        );
+      };
 
 return (
     
@@ -22,7 +36,7 @@ return (
                 >{contact.name}: {contact.number} </span>
                 <Btns
                 type = 'button'
-                onClick={() => onDeleteContact(contact.id, contact.name)}
+                onClick={() => handleDelete(contact.id, contact.name)}
                 >Delete</Btns>
             </LItem>
                    

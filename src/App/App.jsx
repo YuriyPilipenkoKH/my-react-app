@@ -1,13 +1,17 @@
 import {Component} from 'react'
 import { Container } from '../components/container/Container';
 import { Section } from "../components/section/Section";
-// import Button from '../components/buttons/buttons';
+import { Button1 } from '../components/buttons/buttons';
+import Button from '../components/GPT/Button';
 // import { FormOne } from '../components/FormOne/FormOne';
 // import ComplexForm from '../components/complexForm/complexForm';
 import { FormikLib } from '../components/Formik/Formik';
 import { ContactList } from '../components/ContactList/ContactList';
 import { nanoid } from "nanoid";
 import Notiflix from 'notiflix';
+import MyList from '../components/newList/newList';
+
+
 
 export class App extends Component {
   state = {
@@ -39,12 +43,16 @@ render() {
     {/* <ComplexForm onSubmit={values => console.log(values)} /> */}
     <FormikLib></FormikLib>
 
-   {/* <Button>Ripple</Button> */}
+   <Button1>Ripple</Button1>
+
+   <Button>Click me!</Button>
     </Section>
     <ContactList 
     options ={contacts}
     onDeleteContact={this.deleteContact}
     />
+
+    <MyList></MyList>
    
     </Container>
 

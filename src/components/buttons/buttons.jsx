@@ -1,24 +1,25 @@
 
 // import { Butt } from "./buttons.styled"; 
+import { Btns } from "../ContactList/ContactList.styled";
 
- const Button = ({type, id, className, ripple , onClick, style, children}) => {
+export const Button1 = ({type, id, className, ripple , onClick, style, children}) => {
 	
 
 		return (
-			<button
+			<Btns
 			 type= 'button'
 			 id ={id}
 			 className ='btn ripple' 
 			 data-ripple ={ripple}
 			 onClick ={onClick}
 			 style= {style}
-			 >
-			   {children}</button>
+			 ><div className="ripple2"></div>
+			   {children}</Btns>
 		)
 	}
 
 
-export default Button
+
 
 
 
