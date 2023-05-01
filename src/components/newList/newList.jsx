@@ -9,15 +9,22 @@ const MyList = () => {
     ]);
   
     const handleDelete = id => {
-      setItems(items =>
-        items.map(item => {
-          if (item.id === id) {
-            return { ...item, deleted: true };
-          }
-          return item;
-        })
-      );
-    };
+        setItems(items =>
+          items.map(item => {
+            if (item.id === id) {
+              return { ...item, deleted: true };
+            }
+            return item;
+          })
+        );
+        setTimeout(() => {
+          setItems(items => items.filter(item => item.id !== id));
+        }, 300); // adjust the delay as needed to match the transition duration
+      };
+
+    // const handleDelete = id => {
+    //     setItems(items => items.filter(item => item.id !== id));
+    //   };
   
     return (
       <ul>

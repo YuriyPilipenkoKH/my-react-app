@@ -36,7 +36,7 @@ return (
                 >{contact.name}: {contact.number} </span>
                 <Btns
                 type = 'button'
-                onClick={() => handleDelete(contact.id, contact.name)}
+                onClick={() => onDeleteContact(contact.id, contact.name)}
                 >Delete</Btns>
             </LItem>
                    
