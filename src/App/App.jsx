@@ -10,6 +10,7 @@ import { ContactList } from '../components/ContactList/ContactList';
 import { nanoid } from "nanoid";
 import Notiflix from 'notiflix';
 import MyList from '../components/newList/newList';
+import Modal from '../components/Modal/Modal';
 
 
 
@@ -22,7 +23,15 @@ export class App extends Component {
       { id: nanoid(), name: 'Annie Copeland', number: '227-91-26' },
     ],
     filter: '',
+    showModal:false,
   };
+
+  toggleModal =() =>  {
+
+    this.setState(({showModal}) => ({
+      showModal: !showModal,
+    }) )
+  }
 
   deleteContact = (contactId, contactName) => {
     this.setState(prevState => ({
@@ -34,7 +43,7 @@ export class App extends Component {
 
 
 render() {
-  const { contacts} = this.state;
+  const { contacts, showModal} = this.state;
   return (
     <Container>
    <Section title ="Main">
@@ -43,14 +52,24 @@ render() {
     {/* <ComplexForm onSubmit={values => console.log(values)} /> */}
     <FormikLib></FormikLib>
 
-   <Button1>Ripple</Button1>
+   <Button1 
+   onClick={this.toggleModal}
+   >Ripple</Button1>
 
    <Button>Click me!</Button>
-    </Section>
+    </Section> 
     <ContactList 
     options ={contacts}
     onDeleteContact={this.deleteContact}
     />
+    {showModal && <Modal onClose = {this.toggleModal}>
+      <h2>Main Modal</h2>
+      <button 
+      type='button'
+      onClick={this.toggleModal}
+      >shut</button>
+      </Modal>}
+    
 
     <MyList></MyList>
    
