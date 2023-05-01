@@ -6,5 +6,5 @@ return ( <h1>{text} </h1>)
 }
 
 Title.propTypes = {
-    text:PropTypes.string.isRequired,
+    text:PropTypes.string,
 }

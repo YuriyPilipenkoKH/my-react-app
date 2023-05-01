@@ -5,8 +5,8 @@ import Button from '../components/buttons/buttons';
 import { Player } from '../components/Player/Player';
 import { VideoList } from '../components/VideoLis/VideoLis';
 import videos from '../videos.json'
-
-
+import Reader from '../components/Reader/Reader';
+import publications from '../publications.json'
 export class App extends Component {
   state = {
     selectedVideo: null,
@@ -27,6 +27,8 @@ render() {
    <Button>Ripple</Button>
 
     </Section>
+    <Reader items = {publications}></Reader>
+
    
     </Container>
 
