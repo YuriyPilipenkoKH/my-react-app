@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { NListItem } from "./newList.styled";
 
+
 const MyList = () => {
     const [items, setItems] = useState([
       { id: 1, text: "Item 1" },

@@ -21,7 +21,13 @@ export default class Modal extends Component {
             this.props.onClose()
            
         }
-    }  
+    }
+    
+    handleBackDrropClick  =(e) =>{
+        if(e.currentTarget === e.target){
+            this.props.onClose()
+        }
+    }
 
     componentWillUnmount() {
         window.removeEventListener('keydown', this.handleKeyDown)
@@ -29,7 +35,7 @@ export default class Modal extends Component {
 
   render() {
     return createPortal(
-        <MBackdrop className="Modal__backdrop">
+        <MBackdrop className="Modal__backdrop" onClick={this.handleBackDrropClick}>
         <MContent className="Modal__content">{this.props.children}</MContent>
         </MBackdrop> ,
          modalRoot ,  )

@@ -1,7 +1,7 @@
 import styled, {keyframes} from 'styled-components'; 
 
 
-const listItemsAnimation = keyframes`
+export const listItemsAnimation = keyframes`
         from {
        opacity: 0;
        transform: translateX(-5rem);
