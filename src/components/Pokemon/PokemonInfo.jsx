@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { ToastContainer} from 'react-toastify';
 
-export  class Pokemon extends Component {
+export  class PokemonInfo extends Component {
    componentDidMount (name) {
     fetch(`https://pokeapi.co/api/v2/pokemon/ditto`)
         .then(res => res.json())
@@ -10,9 +10,10 @@ export  class Pokemon extends Component {
 
   render() {
     return (
-      <div style= {{maxWidth: 1220}}>
-        <ToastContainer></ToastContainer>       
-       </div>
+      <div>
+        <h1>PokemonInfo</h1>
+        <p> {this.props.pokemonInfo}</p>
+      </div>
     )
   }
 }
