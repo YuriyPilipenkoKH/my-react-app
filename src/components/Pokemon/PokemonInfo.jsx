@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { ToastContainer} from 'react-toastify';
+
 
 export  class PokemonInfo extends Component {
    componentDidMount (name) {
@@ -8,7 +8,7 @@ export  class PokemonInfo extends Component {
         .then(console.log())
   }  
 
-  render() {
+  render() { 
     return (
       <div>
         <h1>PokemonInfo</h1>

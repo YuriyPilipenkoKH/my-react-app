@@ -1,8 +1,8 @@
 import {Component} from 'react'
 import { Container } from '../components/container/Container';
-import { Section } from "../components/section/Section";
 import Button from '../components/buttons/buttons';
 import { PokemonForm } from '../components/Pokemon/PokemonForm';
+import { PokemonInfo } from '../components/Pokemon/PokemonInfo';
 
 export class App extends Component {
   state = {
@@ -12,8 +12,8 @@ export class App extends Component {
   }
 
   componentDidUpdate( prevProps,prevState) {
-    console.log(prevProps);
-    console.log(prevState);
+    // console.log(prevProps);
+    // console.log(prevState);
     console.log(this.state);
   }
 
@@ -43,14 +43,15 @@ render() {
 
   return (
     <Container>
-   <Section title ="Pokemon">
+  
     <PokemonForm
     submit ={this.handleFormSubmit}
     ></PokemonForm>
+    <PokemonInfo pokemonName = {this.state.pokemonName}></PokemonInfo>
    
    
    <Button>Ripple</Button>
-    </Section>
+
     {this.state.loading && <h2>WAIT. . . </h2>}
     {this.state.pokemon && (
       <div> {this.state.pokemon.name}</div>

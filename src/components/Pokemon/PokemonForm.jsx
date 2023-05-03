@@ -7,7 +7,7 @@ export  class PokemonForm extends Component {
         pokemonName: '',
     }
 
-handleNameChange = (e) => {
+handleChange = (e) => {
     this.setState({pokemonName: e.currentTarget.value.toLowerCase()})
     // console.log(this.props);
 }    
@@ -30,7 +30,7 @@ handleSubmit =(e) => {
          type='text'
          name='pokemonName'
          value= {this.setState.pokemonName}
-         onChange={this.handleNameChange}
+         onChange={this.handleChange}
         />
 
         <button type='submit' >Find <ImSearch/></button>
