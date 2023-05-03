@@ -1,5 +1,5 @@
 import {Component} from 'react'
-import axios from "axios";
+// import axios from "axios";
 import { Container } from '../components/container/Container';
 // import { Section } from "../components/section/Section";
 // import Button from '../components/buttons/buttons';
