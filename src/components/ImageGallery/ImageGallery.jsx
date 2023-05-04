@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { ImageGalleryItem } from '../ImageGalleryItem/ImageGalleryItem';
+// import { ImageGalleryItem } from '../ImageGalleryItem/ImageGalleryItem';
 
 export  class ImageGallery extends Component {
   state = {
@@ -29,9 +29,7 @@ export  class ImageGallery extends Component {
 
 
   render() {
-    this.state.images.map(image =>  {
       // const { id, largeImageURL, webformatURL, tags, likes, views, comments, downloads } = image;
-     })
     return (
       <ul className="gallery">
 
