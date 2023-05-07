@@ -4,6 +4,7 @@ import { Section } from "../components/section/Section";
 import Button from '../components/buttons/buttons';
 import Notification from '../components/Notification/Notification';
 
+
 export class App extends Component {
 render() {
 
@@ -15,6 +16,7 @@ render() {
    <Button>Ripple</Button>
     </Section>
     <Notification></Notification>
+
    </Container>
 
    
