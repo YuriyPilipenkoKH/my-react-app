@@ -4,6 +4,10 @@ export const Butt = styled.button`
     position: relative;
     overflow: hidden;
 
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
     font-family: inherit;
     font-size: 16px;
     line-height: 17px;
@@ -29,6 +33,10 @@ export const Butt = styled.button`
     background-color: var(--green);
     color: var(--background-color);
     box-shadow: var(--shadow-two); 
+
+    & >svg {
+   
+    }
   }
 
 
