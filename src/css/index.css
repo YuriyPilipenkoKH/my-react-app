@@ -140,5 +140,6 @@ i.fas {
 }
 
 .iconReactHook, .iconReact {
-  fill: #eee;
+  transition: 0.4s ease;
+  fill: #222;
 }

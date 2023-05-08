@@ -3,10 +3,10 @@ import styled from 'styled-components';
 export const Butt = styled.button`
     position: relative;
     overflow: hidden;
-
+   
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 15px;
 
     font-family: inherit;
     font-size: 16px;
@@ -17,7 +17,7 @@ export const Butt = styled.button`
     gap: 12px;
     padding: 8px 36px;
 
-    height: 40px;
+    height: 50px;
     color: var(--black);
     background-color: var(--yellow);
     border:  transparent;
@@ -35,7 +35,7 @@ export const Butt = styled.button`
     box-shadow: var(--shadow-two); 
 
     & >svg {
-   
+      fill : #eee;
     }
   }
 

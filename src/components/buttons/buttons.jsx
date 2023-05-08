@@ -1,11 +1,11 @@
 
-// import { Butt } from "./buttons.styled"; 
+import { Butt } from "./buttons.styled"; 
 
  const Button = ({type, id, className, ripple , onClick, style, children}) => {
 	
 
 		return (
-			<button
+			<Butt
 			 type= 'button'
 			 id ={id}
 			 className ='btn ripple' 
@@ -13,7 +13,7 @@
 			 onClick ={onClick}
 			 style= {style}
 			 >
-			   {children}</button>
+			   {children}</Butt>
 		)
 	}
 
