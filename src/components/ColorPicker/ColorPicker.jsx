@@ -15,7 +15,7 @@ const makeOptiomClassName = idx => {
   return (
     <div>
         <h2>Picker</h2>
-        <p>chosen color {label}</p>
+        <p>chosen color { }</p>
         <div>
             {colorPickerOptions.map(({label, color}, index) => (
                 <button
