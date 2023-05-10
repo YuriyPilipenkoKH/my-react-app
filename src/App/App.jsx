@@ -6,9 +6,23 @@ import Button from '../components/buttons/buttons';
 import {  iconReactHook } from '../utils/svgIcons';
 import ColorPicker from '../components/ColorPicker/ColorPicker';
 import SignupForm from '../components/SignupForm/SignupForm';
+import Counter from '../components/Counter/Counter';
+import LoadingSpinner from '../components/ColorPicker/Loader/Loader';
 
 export class App extends Component {
+state = {
+  isLoading: false,
+}
+
+componentDidMount() {
+  setTimeout(() => {
+    this.setState({ isLoading: false});
+  }, 4000);
+}
+
+
 render() {
+  const {isLoading} = this.state
 
   return (
    <Container>
@@ -19,9 +33,16 @@ render() {
    <Button>Ripple {iconReact}</Button> */}
    <Button>React {iconReactHook}</Button>
     </Section>
+    {isLoading ? (
+          <LoadingSpinner size={80} color="#ff0000" />
+        ) : (
+          <h1>Loaded!</h1>
+        )}
 
     <ColorPicker></ColorPicker>
     {/* <Notification></Notification> */}
+
+    <Counter></Counter>
 
    </Container>
 
