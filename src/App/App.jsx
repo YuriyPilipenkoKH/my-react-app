@@ -7,17 +7,18 @@ import {  iconReactHook } from '../utils/svgIcons';
 import ColorPicker from '../components/ColorPicker/ColorPicker';
 import SignupForm from '../components/SignupForm/SignupForm';
 import Counter from '../components/Counter/Counter';
-import LoadingSpinner from '../components/ColorPicker/Loader/Loader';
+import LoadingSpinner from '../components/Loader/Loader';
 
 export class App extends Component {
 state = {
   isLoading: false,
+  isSpinning: false,
   spinColor: '#888',
 }
 
 componentDidMount() {
   setTimeout(() => {
-    this.setState({ isLoading: true});
+    this.setState({ isLoading: false});
   }, 4000);
 }
 
@@ -25,32 +26,47 @@ componentDidMount() {
  this.setState({spinColor: color})
 }
 
-toggler() {
-  
+spinToggler=()=> {
+  this.setState(prevState => ({
+    isSpinning: prevState.isSpinning ? false : true
+  }));
+// this.setState(prevState => {
+//   if (prevState.isSpinning)
+//       return ({isSpinning: false});
+//     if (!prevState.isSpinning)
+//       return ({isSpinning: true});
+   
+// });
 }
 
 
 render() {
-  const {spinColor} = this.state
+  const {spinColor , isSpinning} = this.state
 
   return (
    <Container>
      <SignupForm ></SignupForm>
    <Section title ="Main">
   
-{/*    
-   <Button>Ripple {iconReact}</Button> */}
-   <Button onClick={this.toggler}>React {iconReactHook}</Button>
-    </Section>
-    <LoadingSpinner color = {spinColor}></LoadingSpinner>
+{/* <Button>Ripple {iconReact}</Button> */}
 
-    <ColorPicker setColor ={this.colorSetter}></ColorPicker>
+   <Button onClick={this.spinToggler}>React {iconReactHook}</Button>
+    </Section>
+
+    <LoadingSpinner
+     isSpinning = {isSpinning} 
+     color = {spinColor}
+     ></LoadingSpinner>
+
+    <ColorPicker
+     setColor ={this.colorSetter}
+     ></ColorPicker>
+
     {/* <Notification></Notification> */}
 
     <Counter></Counter>
 
    </Container>
-
     )}  
 };
 //===================================

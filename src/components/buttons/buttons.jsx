@@ -3,7 +3,6 @@ import { Butt } from "./buttons.styled";
 
  const Button = ({type, id, className, ripple , onClick, style, children}) => {
 	
-
 		return (
 			<Butt
 			 type= 'button'

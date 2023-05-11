@@ -1,17 +1,19 @@
 import React from 'react';
-// import { iconReactJSSpinner } from '../../../utils/svgIcons';
-import { ReactComponent as Spinner } from '../../../utils/ReactJS.svg';
+import { ReactComponent as Spinner } from '../../utils/ReactJS.svg';
 
-
-
-const LoadingSpinner = ({ color }) => {
+const LoadingSpinner = ({ isSpinning, color }) => {
+ function makeclassName() {
+ 
+  return !isSpinning 
+          ? 'spinner'
+          :  ['spinner', 'move'].join(' ')
+  }
 
     return (
         <Spinner 
-        className='spinner' 
+        className={makeclassName()} 
         style={{fill: color}}
-        ></Spinner>
-     
+        ></Spinner>     
     );
   };
   
