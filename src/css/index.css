@@ -147,7 +147,7 @@ i.fas {
 
 /* ===========load */
 .loading-spinner {
-  border: 2px solid rgba(0, 0, 0, 0.1);
+  border: 2px solid #000000;
   border-top-color: #ffffff;
   border-radius: 50%;
   width: 50px;
@@ -161,9 +161,9 @@ i.fas {
   animation: spin 2s infinite linear;
 }
 
-.iconReactJSSpinner {
+.spinner {
   fill: var(--react-color);
-  animation: spin 2s infinite linear;
+  animation: spin 3s infinite linear;
 }
 
 @keyframes spin {

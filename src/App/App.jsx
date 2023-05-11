@@ -12,34 +12,39 @@ import LoadingSpinner from '../components/ColorPicker/Loader/Loader';
 export class App extends Component {
 state = {
   isLoading: false,
+  spinColor: '#888',
 }
 
 componentDidMount() {
   setTimeout(() => {
-    this.setState({ isLoading: false});
+    this.setState({ isLoading: true});
   }, 4000);
+}
+
+ colorSetter =(color)=> {
+ this.setState({spinColor: color})
+}
+
+toggler() {
+  
 }
 
 
 render() {
-  const {isLoading} = this.state
+  const {spinColor} = this.state
 
   return (
    <Container>
-     <SignupForm></SignupForm>
+     <SignupForm ></SignupForm>
    <Section title ="Main">
   
 {/*    
    <Button>Ripple {iconReact}</Button> */}
-   <Button>React {iconReactHook}</Button>
+   <Button onClick={this.toggler}>React {iconReactHook}</Button>
     </Section>
-    {isLoading ? (
-          <LoadingSpinner size={80} color="#ff0000" />
-        ) : (
-          <h1>Loaded!</h1>
-        )}
+    <LoadingSpinner color = {spinColor}></LoadingSpinner>
 
-    <ColorPicker></ColorPicker>
+    <ColorPicker setColor ={this.colorSetter}></ColorPicker>
     {/* <Notification></Notification> */}
 
     <Counter></Counter>
