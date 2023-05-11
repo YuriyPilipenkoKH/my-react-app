@@ -8,12 +8,14 @@ import ColorPicker from '../components/ColorPicker/ColorPicker';
 import SignupForm from '../components/SignupForm/SignupForm';
 import Counter from '../components/Counter/Counter';
 import LoadingSpinner from '../components/Loader/Loader';
+import Range from '../components/Range/Range';
 
 export class App extends Component {
 state = {
   isLoading: false,
   isSpinning: false,
   spinColor: '#888',
+  animeTime: '3',
 }
 
 componentDidMount() {
@@ -39,9 +41,13 @@ spinToggler=()=> {
 // });
 }
 
+timeSetter = (value) => {
+  this.setState({animeTime: value})
+}
+
 
 render() {
-  const {spinColor , isSpinning} = this.state
+  const {spinColor , isSpinning, animeTime} = this.state
 
   return (
    <Container>
@@ -56,7 +62,10 @@ render() {
     <LoadingSpinner
      isSpinning = {isSpinning} 
      color = {spinColor}
+     time = {animeTime}
      ></LoadingSpinner>
+
+     <Range onChange ={this.timeSetter}></Range>
 
     <ColorPicker
      setColor ={this.colorSetter}

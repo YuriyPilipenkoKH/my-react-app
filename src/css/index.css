@@ -163,11 +163,12 @@ i.fas {
 
 .spinner {
   fill: var(--react-color) ;
-  /* animation: spin 3s infinite linear; */
+  animation-duration: 5s;
 }
 
 .move {
-    animation: spin 3s infinite linear;
+    animation: spin infinite linear;
+    /* animation-duration: 5s;  */
 }
 
 @keyframes spin {
