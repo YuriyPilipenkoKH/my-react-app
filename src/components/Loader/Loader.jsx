@@ -2,7 +2,7 @@ import React from 'react';
 import { ReactComponent as Spinner } from '../../utils/ReactJS.svg';
 
 const LoadingSpinner = ({ isSpinning, color, time }) => {
-console.log('time=', time);
+
  function makeclassName() {
  
   return !isSpinning 

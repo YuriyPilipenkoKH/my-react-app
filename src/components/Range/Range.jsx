@@ -6,7 +6,7 @@ export default function Range({ onChange }) {
   useEffect(() => {
     const handleInputChange = (event) => {
       if (event && event.target && event.target.value) {
-        console.log(event.target.value);
+        // console.log(event.target.value);
         const value = event.target.value;
         onChange(value);
       }
