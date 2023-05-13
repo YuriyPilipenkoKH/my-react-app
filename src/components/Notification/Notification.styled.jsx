@@ -15,11 +15,11 @@ border-radius: 16px;
     flex-direction: column;
     align-items: center;
     gap: 16px;
-    padding: 3px 3px 16px  3px;
+    padding: 3px;
     border: 4px solid #555;
     border-radius: 12px;
 
-    &>span {
+    &>span, p{
     width: 100%;
     text-align: center;
     padding: 20px 12px;
@@ -30,6 +30,11 @@ border-radius: 16px;
     font-weight: 600;
     border-radius: 6px 6px 0 0 ;
  }
+
+   &>p{
+    border-radius:0 0 6px 6px  ;
+    font-size: 16px;
+   }
  }
 `
 export const TabWrapper =({stat}) => {

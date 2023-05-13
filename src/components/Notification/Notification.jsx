@@ -15,11 +15,16 @@ class Notification extends React.Component {
 
   handleClick = async () => {
     try {
-     await axios.get('https://jsonplaceholder.typicode.com/pos1ts/1');
-      this.setState({ notification: { type: 'success', message: 'Request successful' } });
+     await axios.get('https://jsonplaceholder.typicode.com/posts/1');
+      this.setState({ notification: { type: 'success', message: 'Request successful', writing: 'Great job, dude' } });
     } catch (error) {
-      this.setState({ notification: { type: 'error', message: 'Error occurred' } });
+      this.setState({ notification: { type: 'error', message: 'Error occurred' , writing: 'No empty strings, dude. Type some words'} });
     }
+
+
+    setTimeout(() => {
+      this.setState({notification: null,})
+    }, 5000);
   };
 
   renderNotification() {
@@ -47,6 +52,7 @@ class Notification extends React.Component {
           
           <span className="message">{notification.message}</span>
           {icon}
+          <p className='writing'>{notification.writing}</p>
         </div>
       </Wrapper>
     );
