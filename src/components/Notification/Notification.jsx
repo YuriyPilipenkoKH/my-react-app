@@ -1,9 +1,9 @@
 import React from 'react';
 import axios from 'axios';
-import { coyotePointsUp, coyoteWithPlacard, happyCoyote } from '../../utils/svgIcons';
+import {  coyoteWithPlacard, happyCoyote } from '../../utils/svgIcons';
 // import { notifySuccess } from '../../utils/svgIcons';
 import { Wrapper } from './Notification.styled';
-import { TabWrapper } from './Notification.styled';
+
 
 class Notification extends React.Component {
   constructor(props) {
@@ -15,7 +15,7 @@ class Notification extends React.Component {
 
   handleClick = async () => {
     try {
-     await axios.get('https://jsonplaceholder.typicode.com/posts/1');
+     await axios.get('https://jsonplaceholder.typicode.com/pos1ts/1');
       this.setState({ notification: { type: 'success', message: 'Request successful' } });
     } catch (error) {
       this.setState({ notification: { type: 'error', message: 'Error occurred' } });
