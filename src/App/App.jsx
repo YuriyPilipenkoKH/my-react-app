@@ -2,7 +2,7 @@ import {Component} from 'react'
 import { Container } from '../components/container/Container';
 import { Section } from "../components/section/Section";
 import Button from '../components/buttons/buttons';
-// import Notification from '../components/Notification/Notification';
+import Notification from '../components/Notification/Notification';
 import {  iconReactHook } from '../utils/svgIcons';
 import ColorPicker from '../components/ColorPicker/ColorPicker';
 import SignupForm from '../components/SignupForm/SignupForm';
@@ -71,7 +71,7 @@ render() {
      setColor ={this.colorSetter}
      ></ColorPicker>
 
-    {/* <Notification></Notification> */}
+    <Notification></Notification>
 
     <Counter></Counter>
 

@@ -145,6 +145,10 @@ i.fas {
   fill: #222;
 }
 
+.happyCoyote {
+  fill:#222;
+}
+
 /* ===========load */
 .loading-spinner {
   border: 2px solid #000000;

@@ -1,7 +1,9 @@
 import React from 'react';
 import axios from 'axios';
-import { coyotePointsUp, coyoteWithPlacard } from '../../utils/svgIcons';
+import { coyotePointsUp, coyoteWithPlacard, happyCoyote } from '../../utils/svgIcons';
 // import { notifySuccess } from '../../utils/svgIcons';
+import { Wrapper } from './Notification.styled';
+import { TabWrapper } from './Notification.styled';
 
 class Notification extends React.Component {
   constructor(props) {
@@ -28,19 +30,25 @@ class Notification extends React.Component {
     }
 
     let icon;
+    let bgc = '#888'
 
     if (notification.type === 'success') {
-      icon = coyotePointsUp
+      icon = happyCoyote
+      bgc = '#0A8817'
     } 
     else if (notification.type === 'error') {
       icon = coyoteWithPlacard
+      bgc = '#B92F2C'
     }
 
     return (
-      <div className={`notification ${notification.type}`}>
-        {icon}
-        <span className="message">{notification.message}</span>
-      </div>
+      <Wrapper color = {bgc}>
+        <div className={`notification ${notification.type}`}>
+          
+          <span className="message">{notification.message}</span>
+          {icon}
+        </div>
+      </Wrapper>
     );
   }
 
