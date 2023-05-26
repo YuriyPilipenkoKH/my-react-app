@@ -5,7 +5,7 @@ import s from './ColorPicker.module.css'
 export default function ColorPicker({setColor}) {
 
 const [activeOptionIdx, setActiveOptionIdx] = useState(0)
-const [activeColor, setActiveColor] = useState(0)
+// const [activeColor, setActiveColor] = useState(0)
 const {label}  = colorPickerOptions[activeOptionIdx]
 
 const clickHandler = (color) => {

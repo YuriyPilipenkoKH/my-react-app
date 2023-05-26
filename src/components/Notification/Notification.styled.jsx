@@ -1,13 +1,42 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`
-    
-width: 280px;
-padding: 10px;
-background-color: var(--beige);
-border-radius: 16px;
 
-/* box-shadow:inset 0px 0px 0px 10px #555; */
+position: fixed;
+top: 100px;
+left: 50%;
+transform: translateX(-50% );
+z-index: 10;
+
+
+width: 280px;
+ padding: 8px; 
+background-color: var(--beige);
+border-radius: 18px;
+
+
+.alert-enter {
+  opacity: 0;
+  transform: scale(0.9);
+
+}
+.alert-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 1500ms, transform 1500ms ;
+  
+}
+
+
+.alert-exit {
+  opacity: 1;
+}
+
+.alert-exit-active {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 1500ms, transform 1500ms ;
+}
 
  &>div{
    
@@ -16,8 +45,10 @@ border-radius: 16px;
     align-items: center;
     gap: 16px;
     padding: 3px;
-    border: 4px solid #555;
-    border-radius: 12px;
+    border: 5px solid ;
+    border-color: #777;
+    border-radius: 14px;
+    background-color: var(--beige);
 
     &>span, p{
     width: 100%;
@@ -37,6 +68,3 @@ border-radius: 16px;
    }
  }
 `
-export const TabWrapper =({stat}) => {
-    return <Wrapper stat = {stat}></Wrapper>
-}

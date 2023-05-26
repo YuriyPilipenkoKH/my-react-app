@@ -1,34 +1,42 @@
-import React from 'react';
+import  {useState,  } from 'react';
 import axios from 'axios';
 import {  coyoteWithPlacard, happyCoyote } from '../../utils/svgIcons';
-// import { notifySuccess } from '../../utils/svgIcons';
 import { Wrapper } from './Notification.styled';
+import React from 'react';
+// import { CSSTransition } from 'react-transition-group';
+import { CSSTransition } from 'react-transition-group';
+//TransitionGroup, 
 
 
-class Notification extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      notification: null,
-    };
-  }
 
-  handleClick = async () => {
+
+const Notification =() => {
+const [notification, setNotification] = useState(null)
+const [off, SetOff] = useState(true)
+
+
+
+
+
+ const handleClick = async () => {
     try {
-     await axios.get('https://jsonplaceholder.typicode.com/posts/1');
-      this.setState({ notification: { type: 'success', message: 'Request successful', writing: 'Great job, dude' } });
+     await axios.get('https://jsonplaceholder.typicode.com/pos1ts/1');
+     setNotification( { type: 'success', message: 'Request successful', writing: 'Great job, dude' } );
+     SetOff(true)
     } catch (error) {
-      this.setState({ notification: { type: 'error', message: 'Error occurred' , writing: 'No empty strings, dude. Type some words'} });
-    }
+      setNotification( { type: 'error', message: 'Error occurred' , writing:'Try again later'} );
+      SetOff(true)
+    }// 'No empty strings, dude. Type some words'
 
 
     setTimeout(() => {
-      this.setState({notification: null,})
+      // setNotification(null)
+      // SetOff(false)
     }, 5000);
   };
 
-  renderNotification() {
-    const { notification } = this.state;
+ const renderNotification =()=> {
+ 
 
     if (!notification) {
       return null;
@@ -47,25 +55,33 @@ class Notification extends React.Component {
     }
 
     return (
-      <Wrapper color = {bgc}>
-        <div className={`notification ${notification.type}`}>
-          
-          <span className="message">{notification.message}</span>
-          {icon}
-          <p className='writing'>{notification.writing}</p>
-        </div>
-      </Wrapper>
+     
+      <CSSTransition 
+       in ={off}
+       classNames='alert'
+         timeout={1500}
+          unmountOnExit
+          mountOnEnter
+           >
+        <Wrapper color = {bgc} className={`notification ${notification.type}`}>
+          <div >
+            <span className="message">{notification.message}</span>
+            {icon}
+            <p className='writing'>{notification.writing}</p>
+          </div>
+        </Wrapper>
+      </CSSTransition>
+  
     );
   }
 
-  render() {
+ 
     return (
       <div>
-        <button onClick={this.handleClick}>Make Request</button>
-        {this.renderNotification()}
+        <button onClick={handleClick}>Make Request</button>
+        {renderNotification()}
       </div>
     );
-  }
 }
 
 export default Notification;
